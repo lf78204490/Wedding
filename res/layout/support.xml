@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/photo0" >
+
+    <RelativeLayout
+        android:id="@+id/ll_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="60dp" >
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_wish" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@color/trans_black_light"
+        android:padding="@dimen/padding_medium" >
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/tv_medium_gy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="如果有问题请与我们联系" />
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium" >
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/tv_medium_gy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:text="邮箱：" />
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/tv_medium_gy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:autoLink="email"
+                android:text="78204490@qq.com"
+                android:textColorLink="@color/red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_below="@+id/ll1"
+            android:layout_centerHorizontal="true" >
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/tv_medium_gy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电话：" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/tv_medium_gy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="phone"
+                android:text="18292571508"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/red_text"
+                android:textColorLink="@color/red" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

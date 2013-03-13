@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="item_bg_gray1">#666666</color>
+    <color name="item_bg_gray2">#d7d5d5</color>
+    <color name="red_text">#a02b0a</color>
+    <color name="gy_text_gray">#565656</color>
+    <color name="gy_text_hint">#9a9a9a</color>
+    <color name="color_text_checked">@color/white</color>
+    <color name="color_text_normal">@color/black</color>
+    <color name="bg">@color/white</color>
+    <color name="warn_tx_color">@color/red</color>
+    <color name="gold">#b89766</color>
+    <color name="text_color_black">#ff000000</color>
+    <color name="text_color_white">#ffffffff</color>
+    <color name="text_color_blue">#ff048bbd</color>
+    <color name="text_color_red">#ffff0000</color>
+    <color name="text_color1">#ff000000</color>
+    <color name="text_color2">#ff4a4c4b</color>
+    <color name="black">#ff000000</color>
+    <color name="blue">#037e90</color>
+    <color name="blue_light">#ff6495ed</color>
+    <color name="blue_dark">#004952</color>
+    <color name="blue_deep">#0e2352</color>
+    <color name="gray_light">#d0d0d0</color>
+    <color name="gray">#ff767771</color>
+    <color name="gray_middle">#6e6e6e</color>
+    <color name="gray_deep">#ff4a4c4b</color>
+    <color name="gray_panel_bg">#ffd7d5d6</color>
+    <color name="gray_guoyin_delegetion_date">#d0d0d0</color>
+    <color name="white">#ffffffff</color>
+    <color name="white_light">#ffefede8</color>
+    <color name="red">#ffff0000</color>
+    <color name="green_light">#bad9b9</color>
+    <color name="green">#298224</color>
+    <color name="green_dark">#1c5717</color>
+    <color name="yelloolorsw">#77ffff00</color>
+    <color name="orange">#ffff6600</color>
+    <color name="orange_dark">#ffb96600</color>
+    <color name="transparent">#00000000</color>
+    <color name="trans_black">#80000000</color>
+    <color name="trans_black_light">#60000000</color>
+    <color name="full_transparent">#00000000</color>
+    <color name="half_transparent">#aa000000</color>
+    <color name="bg">@color/white</color>
+    <color name="warn_tx_color">@color/red</color>
+    <color name="gold">#ffb89766</color>
+    <color name="adv_tv">#ff686868</color>
+    <color name="btn_blue">#ff4b86a4</color>
+    <color name="layout_bg">#ffe8e8e8</color>
+    <color name="tab_bg">@color/blue</color>
+
+</resources>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/photo2" >
+
+    <RelativeLayout
+        android:id="@+id/bottombar"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="#b0000000"
+        android:visibility="gone" />
+
+    <SlidingDrawer
+        android:id="@+id/slidingDrawer1"
+        android:layout_width="2000dp"
+        android:layout_height="1000dp"
+        android:layout_marginBottom="80dp"
+        android:layout_marginTop="50dp"
+        android:content="@+id/content"
+        android:handle="@+id/handle" >
+
+        <RelativeLayout
+            android:id="@+id/handle"
+            android:layout_width="fill_parent"
+            android:layout_height="90dp"
+            android:background="#b0000000"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <ImageView
+                android:id="@+id/invit_iv_lup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/arrow_up" />
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/inviatate" />
+
+            <ImageView
+                android:id="@+id/invit_iv_rup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/arrow_up" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b0000000" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="一、化妆\n
+
+　　5：30 起床\n
+
+　　7：00 新郎发型做好后到达女方娘家附近等待\n
+
+　　7：45 新娘妆完成，通知新郎\n
+
+　　化妆师、美发师红包(当然是因人而宜，结婚当天讨个好彩头)\n
+
+　　\n二、婚车\n
+
+　　6：30 开始扎彩车\n
+
+　　7：00 专车送新郎\n
+
+　　7：30 彩车完成\n
+
+　　7：45 专车送新娘回娘家(8：30前到达)\n
+
+　　9：00 所有婚车到达新娘家\n
+
+　　司机红包\n
+
+　　\n三、接新娘\n
+
+　　8：00 伴郎准备好鲜花、红包\n
+
+　　8：30 新娘回到娘家，藏好新鞋\n
+
+　　8：40 新郎带领兄弟们开始抢人\n
+
+　　8：45 敲门、盘问、塞红包、挤门\n
+
+　　8：55 新郎找新鞋，向女方家人承诺\n
+
+　　9：00 彩带师到位气球到位 (伴娘伴郎完成)\n
+
+　　9：05 新郎背新娘出门，彩带，踩气球\n
+
+　　9：10 车队出发\n
+
+　　\n四、迎新娘\n
+
+　　10：00 车队到达男方家 (新人的新房)\n
+
+　　10：05 新郎抱新娘进门，彩带，踩气球\n
+
+　　10：10 小孩子滚床\n
+
+　　10：15 伴娘准备好茶\n
+
+　　10：20 新娘给男方父母敬茶\n
+
+　　10：40 新郎新娘出发至酒店\n
+
+　　\n五、酒店准备\n
+
+　　10：00 将糖、烟、酒、茶、饮料等带至酒店\n
+
+　　10：10 最后检查酒席安排、音响、签到处等细节\n
+
+　　10：30 准备好新郎新娘迎宾香烟火柴糖\n
+
+　　10：45 彩带师到位酒店门口\n
+
+　　\n六、酒店迎宾\n
+
+　　10：50 新郎新娘到酒店，彩带\n
+
+　　11：00 签到处人员就位\n
+
+　　11：00 引导人员门口就位\n
+
+　　11：00 新郎新娘伴郎伴娘门口迎宾\n
+
+　　\n七、婚礼仪式\n
+
+　　12：15 主持人准备\n
+
+　　12：15 音响准备\n
+
+　　12：15 结婚证书、戒指准备\n
+
+　　12：15 气球、彩带到位\n
+
+　　12：20 奏乐，新人入场，彩带、踩气球\n
+
+　　主持人介绍\n
+
+　　主婚人致词\n
+
+　　证婚人宣读结婚证书\n
+
+　　新人父母上台\n
+
+　　新郎新娘交换戒指，三鞠躬\n
+
+　　新人给父母敬茶\n
+
+　　双方父母代表讲话\n
+
+　　双方父母退场\n
+
+　　新人开香槟、切蛋糕、喝交杯酒\n
+
+　　游戏 (仪式和婚庆公司及司仪定)\n
+
+　　13：00 婚宴正式开始\n
+
+　　13：00 新郎新娘退场、速食，新娘换礼服\n
+
+　　13：15 新郎新娘逐桌敬酒\n
+
+　　14：00 宴席结束，宾客与新人合影\n
+
+　　\n八、下午休息\n
+
+　　14：00 宾客离开或到棋牌室娱乐\n
+
+　　14：30 新郎新娘进餐、休息\n
+
+　　14：30 清点所剩烟酒糖等\n
+
+　　14：30 统计晚餐人数\n
+
+　　\n九、晚餐\n
+
+　　17：00 通知酒店晚餐准备数量\n
+
+　　18：00 请宾客进晚餐\n
+
+　　20：00 清点所有物品，离开酒店\n
+
+　　\n十、闹洞房\n
+
+　　21：00 开始闹洞房\n
+
+　　22：30 宾客离开" />
+        </ScrollView>
+    </SlidingDrawer>
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_map"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_map_click"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/btn_return"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_return_click"
+        android:visibility="gone" />
+
+</RelativeLayout>
