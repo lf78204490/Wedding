@@ -3,6 +3,10 @@ package cn.op.common.util;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
+/**
+ * @author Frank
+ *
+ */
 public class DepthPageTransformer implements ViewPager.PageTransformer {
 	private static float MIN_SCALE = 0.75f;
 
