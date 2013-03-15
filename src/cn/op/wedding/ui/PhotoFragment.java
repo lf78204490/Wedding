@@ -7,32 +7,69 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
+import cn.op.common.util.Log;
 import cn.op.wedding.R;
 
 public class PhotoFragment extends Fragment {
 
+	protected static final String TAG = Log.makeLogTag(PhotoFragment.class);
 	private LayoutInflater inflater;
 	private FragmentActivity activity;
+	private SamplePagerAdapter adapter;
+	protected boolean isPageEnd;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		this.inflater = inflater;
 
-		
 		activity = getActivity();
 		View view = inflater.inflate(R.layout.photo, null);
 
 		ViewPager vpPhoto = (ViewPager) view.findViewById(R.id.vpPhoto);
-		vpPhoto.setAdapter(new SamplePagerAdapter());
+		adapter = new SamplePagerAdapter();
+		vpPhoto.setAdapter(adapter);
+
+		vpPhoto.setOnPageChangeListener(new OnPageChangeListener() {
+			@Override
+			public void onPageSelected(int position) {
+			}
+
+			@Override
+			public void onPageScrolled(int position, float positionOffset,
+					int positionOffsetPixels) {
+				if (positionOffsetPixels == 0) {
+					isPageEnd = true;
+				} else {
+					isPageEnd = false;
+				}
+			}
+
+			@Override
+			public void onPageScrollStateChanged(int state) {
+			}
+		});
+
+//		vpPhoto.setOnTouchListener(new OnTouchListener() {
+//			@Override
+//			public boolean onTouch(View v, MotionEvent event) {
+//				if (isPageEnd) {
+//					return ((MainActivity) activity).detector.onTouchEvent(event);
+//				} else {
+//					return false;
+//				}
+//			}
+//		});
 
 		return view;
 	}
@@ -61,12 +98,14 @@ public class PhotoFragment extends Fragment {
 				public void onPhotoTap(View arg0, float arg1, float arg2) {
 					if (tvInfo.getVisibility() == View.GONE) {
 						tvInfo.setText("我是一艘漂泊的小船，当我遇见你，让我停留在你爱的港湾，我愿献出我所有的收获，只要你愿你，我不再远航。只因遇见你");
-						Animation animation = AnimationUtils.loadAnimation(activity, R.anim.translucent_zoom_in);
+						Animation animation = AnimationUtils.loadAnimation(
+								activity, R.anim.translucent_zoom_in);
 
 						tvInfo.startAnimation(animation);
 						tvInfo.setVisibility(View.VISIBLE);
 					} else {
-						Animation animation = AnimationUtils.loadAnimation(activity, R.anim.translucent_zoom_out);
+						Animation animation = AnimationUtils.loadAnimation(
+								activity, R.anim.translucent_zoom_out);
 
 						tvInfo.startAnimation(animation);
 						tvInfo.setVisibility(View.GONE);

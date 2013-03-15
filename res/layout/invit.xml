@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollview"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/photo2" >
+    android:layout_height="match_parent" >
 
     <RelativeLayout
-        android:id="@+id/bottombar"
-        android:layout_width="fill_parent"
-        android:layout_height="80dp"
-        android:layout_alignParentBottom="true"
-        android:background="#b0000000"
-        android:visibility="gone" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
 
-    <SlidingDrawer
-        android:id="@+id/slidingDrawer1"
-        android:layout_width="2000dp"
-        android:layout_height="1000dp"
-        android:layout_marginBottom="80dp"
-        android:layout_marginTop="50dp"
-        android:content="@+id/content"
-        android:handle="@+id/handle" >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/photo2" />
+
+        <ImageView
+            android:id="@+id/view1111"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true" />
 
         <RelativeLayout
             android:id="@+id/handle"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="90dp"
-            android:background="#b0000000"
+            android:layout_below="@+id/view1111"
+            android:background="@color/trans_black_light"
             android:paddingLeft="10dp"
             android:paddingRight="10dp" >
 
@@ -54,21 +54,15 @@
                 android:background="@drawable/arrow_up" />
         </RelativeLayout>
 
-        <ScrollView
+        <TextView
             android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#b0000000" >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="textMultiLine"
-                android:padding="10dp"
-                android:textSize="15sp"
-                android:textColor="@color/white"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="一、化妆\n
+            android:layout_below="@+id/handle"
+            android:background="@color/trans_black_light"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:text="一、化妆\n
 
 　　5：30 起床\n
 
@@ -206,34 +200,37 @@
 
 　　21：00 开始闹洞房\n
 
-　　22：30 宾客离开" />
-        </ScrollView>
-    </SlidingDrawer>
+　　22：30 宾客离开"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="gone" />
 
-    <LinearLayout
-        android:id="@+id/layout_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </LinearLayout>
 
-    <ImageView
-        android:id="@+id/btn_map"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="12dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/btn_map_click"
-        android:visibility="gone" />
+        <ImageView
+            android:id="@+id/btn_map"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_map_click"
+            android:visibility="gone" />
 
-    <ImageView
-        android:id="@+id/btn_return"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/btn_return_click"
-        android:visibility="gone" />
+        <ImageView
+            android:id="@+id/btn_return"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_return_click"
+            android:visibility="gone" />
+    </RelativeLayout>
 
-</RelativeLayout>
+</ScrollView>

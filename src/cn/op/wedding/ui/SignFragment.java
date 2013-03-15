@@ -7,9 +7,12 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import cn.op.wedding.R;
 import cn.op.wedding.domain.SignAccount;
@@ -33,6 +36,14 @@ public class SignFragment extends ListFragment {
 		this.inflater = inflater;
 		View view = inflater.inflate(R.layout.sign, null);
 		pb = view.findViewById(R.id.pb);
+
+		ListView listView = (ListView) view.findViewById(android.R.id.list);
+//		listView.setOverscrollHeader(getResources().getDrawable(R.color.red));
+//		listView.setOverscrollFooter(getResources().getDrawable(R.drawable.arrow_down));
+		
+		listView.setOverScrollMode(View.OVER_SCROLL_NEVER);
+//		listView.setOverScrollMode(View.OVER_SCROLL_IF_CONTENT_SCROLLS);
+		
 		return view;
 	}
 
@@ -50,6 +61,18 @@ public class SignFragment extends ListFragment {
 		adapter = new SignAdapter(data);
 		setListAdapter(adapter);
 
+		ListView listView = getListView();
+//		listView.setOnTouchListener(new OnTouchListener() {
+//			@Override
+//			public boolean onTouch(View v, MotionEvent event) {
+//				return ((MainActivity) activity).detector.onTouchEvent(event);
+//			}
+//		});
+		
+		
+
+		
+		
 		// initDate();
 	}
 

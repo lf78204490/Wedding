@@ -27,7 +27,7 @@ public class PathMenuFragment extends Fragment {
 
 	private FragmentActivity activity;
 
-	protected int curtCheckedItem = 0;
+	private int curtCheckedItem = 0;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -62,23 +62,35 @@ public class PathMenuFragment extends Fragment {
 		items[curtCheckedItem]
 				.setImageResource(ITEM_DRAWABLES_TRUE[curtCheckedItem]);
 		arcMenu.setCurtClickItemIndex(curtCheckedItem);
-		
+
 		return view;
 	}
 
 	protected void performPathItemClick(int position) {
-		toggleItemBg(position);
-		curtCheckedItem = position;
-
+		togglePathItemBg(position);
 		((PathMenuFragment.OnPathItemClickListener) activity)
 				.onPathItemClick(position);
 	}
 
-	private void toggleItemBg(int position) {
+	/**
+	 * 切换选中的item的背景
+	 * 
+	 * @param position
+	 */
+	public void togglePathItemBg(int position) {
 		for (int j = 0; j < items.length; j++) {
 			items[j].setImageResource(ITEM_DRAWABLES[j]);
 		}
 		items[position].setImageResource(ITEM_DRAWABLES_TRUE[position]);
+		curtCheckedItem = position;
+	}
+
+	public int getCurtCheckedItem() {
+		return curtCheckedItem;
+	}
+
+	public void setCurtCheckedItem(int curtCheckedItem) {
+		this.curtCheckedItem = curtCheckedItem;
 	}
 
 	public interface OnPathItemClickListener {
